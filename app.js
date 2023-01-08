@@ -1,8 +1,10 @@
 const express = require("express");
 const app = express();
 const port = process.env.PORT || 3001;
+const cors = require("cors");
 
 const ar=[{id:1,desc:"waga"},{id:2,desc:"baga"}]
+app.use(cors());
 app.get("/", (req, res) => res.type('html').send(html));
 app.get("/test", (req, res) => res.type('html').send(ar));
 
