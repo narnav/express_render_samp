@@ -2,7 +2,9 @@ const express = require("express");
 const app = express();
 const port = process.env.PORT || 3001;
 
+const ar=[{id:1,desc:"waga"},{id:2,desc:"baga"}]
 app.get("/", (req, res) => res.type('html').send(html));
+app.get("/test", (req, res) => res.type('html').send(ar));
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
